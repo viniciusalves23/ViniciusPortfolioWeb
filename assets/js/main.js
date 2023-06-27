@@ -1,3 +1,4 @@
+
 (function ($) {
     'use strict';
 
@@ -28,22 +29,9 @@
             imJs.wowActive();
             imJs.awsActivation();
             imJs.demoActive();
-            imJs.activePopupDemo();
             imJs.onePageNav();
         },
 
-        
-        activePopupDemo: function (e) {
-            $('.popuptab-area li a.demo-dark').on('click', function (e) {
-                $('.demo-modal-area').addClass('dark-version');
-                $('.demo-modal-area').removeClass('white-version');
-            });
-
-            $('.popuptab-area li a.demo-light').on('click', function (e) {
-                $('.demo-modal-area').removeClass('dark-version');
-                $('.demo-modal-area').addClass('white-version');
-            })
-        },
 
         demoActive: function (e) {
             $('.rn-right-demo').on('click', function (e) {
@@ -51,6 +39,20 @@
             })
             $('.demo-close-btn').on('click', function (e) {
                 $('.demo-modal-area').removeClass('open');
+            })
+
+            $('.div_desenvolvedor_web').on('click', function (e) {
+                $('.demo-modal-area-dev-web').addClass('open');
+            })
+            $('.demo-close-btn').on('click', function (e) {
+                $('.demo-modal-area-dev-web').removeClass('open');
+            })
+
+            $('.div_designer').on('click', function (e) {
+                $('.demo-modal-area-designer').addClass('open');
+            })
+            $('.demo-close-btn').on('click', function (e) {
+                $('.demo-modal-area-designer').removeClass('open');
             })
         },
 
